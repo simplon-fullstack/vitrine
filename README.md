@@ -183,6 +183,16 @@ $prixPanier = ($produit1 * $quantite1) + ($produit2 * $quantite2);
 $resultat = ($nombre1 + $nombre2 > 100);    // FAUX
 
 
+## EXERCICE POUR CET APRES-MIDI
+
+
+CREER UN SITE VITRINE DE QUELQUES PAGES EN PHP
+Accueil
+Galerie
+Contact
+
+* DECOUPER VOTRE CODE PHP EN PLUSIEURS FICHIERS 
+* ET RECONSTRUIRE AVEC PHP LES PAGES HTML ENTIERES
 
 
 
