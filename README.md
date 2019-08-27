@@ -54,9 +54,14 @@ CHANGER LE SUFFIXE .html EN .php
 
 https://www.php.net/manual/fr/
 
+
+https://www.php.net/manual/fr/language.variables.basics.php
+
+
     en PHP, surtout du camelCase, mais aussi du snake_case
     mais - est utilisé pour la soustraction 
     donc on ne peut pas utiliser kebab-case
+
 
 ## OPERATEUR D'AFFECTATION =
 
