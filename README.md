@@ -98,7 +98,7 @@ $maVariable = "le texte à mémoriser dans la variable";
 
 $texte1        = "un texte";           // PREFERENCE EN PHP
 $texte2        = 'un autre texte';
-$codeBalise    = '<img src="images/phot1.jpg">';
+$codeBalise    = '<img src="images/photo1.jpg">';
 
 $prenom        = "beyonce";
 $nom           = "knowles";
