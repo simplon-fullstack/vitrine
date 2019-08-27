@@ -19,6 +19,8 @@ ON VA AJOUTER UN MENU POUR POUVOIR NAVIGUER ENTRE LES PAGES
 
 ## PHP
 
+![https://workodin.com/assets/media/architecture-lamp.svg](serveur web lamp)
+
 1994 CREATION
 
 UTILITE POUR NOUS
