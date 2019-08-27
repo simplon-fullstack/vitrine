@@ -1,12 +1,12 @@
 # vitrine
 
-site vitrine
+PROJET: site vitrine
 
 ON VEUT CREER UN SITE DE PLUSIEURS PAGES
 
-Accueil     index.html
-Galerie     galerie.html
-Contact     contact.html
+    Accueil     index.html
+    Galerie     galerie.html
+    Contact     contact.html
 
 ON VA AJOUTER UN MENU POUR POUVOIR NAVIGUER ENTRE LES PAGES
 
@@ -174,22 +174,22 @@ $prixPanier = ($produit1 * $quantite1) + ($produit2 * $quantite2);
 
 ## OPERATEUR DE COMPARAISON SUR LES NOMBRES
 
-==      EGALITE
-<=      INFERIEUR OU EGAL
->=      SUPERIEUR OU EGAL
-<       INFERIEUR STRICT
->       SUPERIEUR STRICT
+    ==      EGALITE
+    <=      INFERIEUR OU EGAL
+    >=      SUPERIEUR OU EGAL
+    <       INFERIEUR STRICT
+    >       SUPERIEUR STRICT
 
-$resultat = ($nombre1 + $nombre2 > 100);    // FAUX
+    $resultat = ($nombre1 + $nombre2 > 100);    // FAUX
 
 
 ## EXERCICE POUR CET APRES-MIDI
 
 
-CREER UN SITE VITRINE DE QUELQUES PAGES EN PHP
-Accueil
-Galerie
-Contact
+    CREER UN SITE VITRINE DE QUELQUES PAGES EN PHP
+    Accueil
+    Galerie
+    Contact
 
 * DECOUPER VOTRE CODE PHP EN PLUSIEURS FICHIERS 
 * ET RECONSTRUIRE AVEC PHP LES PAGES HTML ENTIERES
