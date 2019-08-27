@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site vitrine</title>
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-    <header>
-        <h1>CONTACT</h1>
-        <!-- menu de navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">accueil</a></li>
-                <li><a href="galerie.html">galerie</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
         <section>
             <h3>Contact</h3>
         </section>
@@ -38,12 +15,3 @@
                 <button type="submit">envoyer le message</button>
             </form>
         </section>
-    </main>
-    <footer>
-        <p>tous droits réservés</p>   
-    </footer>
-
-    <script src="js/main.js"></script>
-
-</body>
-</html>
