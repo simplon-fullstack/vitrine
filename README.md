@@ -269,7 +269,207 @@ $resultat = ($nombre1 + $nombre2 > 100);    // FAUX
     * ET RECONSTRUIRE AVEC PHP LES PAGES HTML ENTIERES
 
 
+
+## VARIABLES ET VALEURS
+
+EN PHP, UNE VARIABLE COMMENCE PAR $
+
+$unTexte = 'le texte à mémoriser';
+
+VALEURS
+* TEXTE (string)
+* NOMBRE (entier et décimaux)
+* BOOLEEN (vrai ou faux)
+* TABLEAUX
+
+## OPERATEURS POUR MANIPULER CES VALEURS
+
+* OPERATEURS DE CONCATENATION DE TEXTES
+* OPERATEURS DE CALCUL SUR LES NOMBRES 
+* OPERATEURS DE COMPARAISON (SUR LES TEXTES ET LES NOMBRES)
+
+## VALEURS: TABLEAUX ORDONNES (array)
+
+https://www.php.net/manual/fr/language.types.array.php
+
+
+// DANS UNE VARIABLE JE STOCKE UNE SEULE VALEUR
+$unTexte = "UNE VALEUR";
+
+// ON A BESOIN DE POUVOIR GROUPER PLUSIEURS ENSEMBLE
+// DANS UNE SEULE VARIABLE
+$tableauMot = [ "mot1", "mot2", "mot3" ];
+
+// TABLEAU ORDONNE
+// LES ELEMENTS DANS UN CERTAIN ORDRE
+// ON A LE PREMIER ELEMENT, LE 2E ELEMENT, etc...
+// CHAQUE ELEMENT A UN INDICE QUI DONNE SON EMPLACEMENT
+// ATTENTION: ON COMMENCE A ZERO
+
+// SI JE VEUX ACCEDER A UNE VALEUR DANS UN TABLEAU ORDONNE 
+// JE VAIS UTILISER SON INDICE
+
+$premierMot = $tableauMot[0];       // "mot1"
+$troisiemeMot = $tableauMot[2];     // "mot3"
+
+// POUR COMPTER LE NOMBRE D'ELEMENTS DANS UN TABLEAU
+// EN PHP, ON UTILISE UNE FONCTION count
+// https://www.php.net/manual/fr/function.count.php
+$nombreMot = count($tableauMot);
+
+// EN JS
+// var tableauMot = [ "mot1", "mot2", "mot3" ];
+// var nombreMot  = tableauMot.length;
+
+// SI JE VEUX CHANGER LA VALEUR D'UN ELEMENT
+// SI JE VEUX REMPLACER "mot2" par "jeudi"
+$tableauMot[1] = "jeudi";
+
+// POUR AJOUTER UNE NOUVELLE VALEUR 
+// A LA FIN DU TABLEAU
+$tableauMot[] = "mot4";
+
+
+## TABLEAUX ASSOCIATIFS (array)
+
+// ON STOCKE LES INFORMATIONS PAR PAIRE CLE => VALEUR
+$tableauAssociatif = [ 
+    "cle1" => "mot1", 
+    "cle2" => "mot2", 
+    "cle3" => "mot3" 
+    ];
+
+// SI JE VEUX ACCEDER A UN ELEMENT DANS UN TABLEAU ASSOCIATIF
+// JE VAIS UTILISER SA CLE
+// ATTENTION: LA CLE DOIT ETRE UNIQUE ET C'EST UN TEXTE
+$mot2 = $tableauAssociatif["cle2"];
+
+// SI JE VEUX CHANGER LA VALEUR D'UN ELEMENT
+// JE VAIS AUSSI UTILISER SA CLE
+// SI JE VEUX CHANGER "mot3" EN "vendredi"
+$tableauAssociatif["cle3"] = "vendredi";
+
+// EN JS
+// LES TABLEAUX SONT SEULEMENT ORDONNES AVEC DES INDICES
+// var tableau = [ 'mot1', 'mot2', 'mot3' ];
+// var element1 = tableau[0];
+/*
+ var objet = { 
+    propriete1 : 'valeur1', 
+    propriete2 : 'valeur2',
+    propriete3 : 'valeur3' 
+    };
+
+*/
+
+
+## DIFFERENCE ENTRE GET ET POST
+
+AVEC GET, LES INFOS DE FORMULAIRE SONT ENVOYEES DANS L'URL
+
+AVEC POST, LES INFOS DE FORMULAIRE NE SONT ENVOYEES DANS L'URL
+(pour les voir dans l'inspecteur du navigateur, il faut chercher plus loin...)
+(Avec google chrome, dans l'onglet Réseau > Headers > et scroller à la fin...)
+
+AVEC GET ET POST, LE NAVIGATEUR CHANGE DE PAGE POUR ALLER SUR url-traitement.php
+=> ON VEUT PAS CA !!!
+
+LA TAILLE D'UNE REQUETE GET EST LIMITEE A QUELQUES Ko (AUTOUR DE 4Ko)
+=> ON NE PEUT PAS ENVOYER BEAUCOUP D'INFOS
+
+LA TAILLE D'UNE REQUETE POST EST LIMITEE A PLUSIEURS Go
+=> A UTILISER POUR UPLOADER DES VIDEOS OU DES PHOTOS
+
+ATTENTION: LES INFOS EN GET SONT VISIBLES DANS L'URL
+=> NE JAMAIS UTILISER GET POUR DES INFOS CONFIDENTIELLES
+=> BIEN EFFACER L'HISTORIQUE DU NAVIGATEUR QUI GARDE LES REQUETES GET
+
+## AJAX : POUR NE PAS CHANGER DE PAGE
+
+ON VA DEVOIR UTILISER JAVASCRIPT POUR ENVOYER LES FORMULAIRES
+...
+AJAX A DEMARRE L'ERE WEB2.0
+LES WEBAPPS (WEB APPLICATIONS) REPOSENT SUR AJAX
+
+=> AJAX EST DEVENU UN OUTIL TRES IMPORTANT DANS L'INTERNET ACTUEL
+AJAX SE RAJOUTE EN PLUS DE GET ET POST POUR COMMUNIQUER ENTRE LE NAVIGATEUR ET LE SERVEUR WEB
+Asynchronous
+Javascript
+And
+XML
+
+XML ETAIT A LA MODE AU DEBUT (LANGAGES A BALISES)
+DEPUIS QUE JAVASCRIPT EST DEVENU TRES POPULAIRE
+ON UTILISE JSON A LA PLACE DE XML
+
+JavaScript
+Object
+Notation
+
 A SUIVRE...
+
+## PROTECTION DU DOSSIER CONFIDENTIEL AVEC .htaccess
+
+AVEC APACHE, ON PEUT BLOQUER L'ACCES A UN DOSSIER
+EN AJOUTANT UN FICHIER .htaccess DANS CE DOSSIER
+ET QUI CONTIENT LA LIGNE Require all denied
+
+
+    Require all Denied
+    # CETTE LIGNE PERMET DE DEMANDER A APACHE
+    # DE BLOQUER L'ACCES AUX NAVIGATEURS POUR LE DOSSIER ACTUEL
+    # https://httpd.apache.org/docs/current/fr/howto/access.html
+    # => Accès interdit!
+
+
+
+## EXERCICE 
+
+ON VEUT AJOUTER LE CODE POUR TRAITER LE FORMULAIRE DE CONTACT
+ET ON VA STOCKER LES INFOS nom, email, message DANS UN FICHIER php/contact.txt
+
+SOUS LA FORME DE BLOCS
+
+-----
+nom: visiteur1
+email: visiteur1@mail.me
+
+message laissé par le visiteur1
+
+-----
+nom: visiteur2
+email: visiteur2@mail.me
+
+message laissé par le visiteur2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## STRUCTURE DE CONTROLE: CONDITION
 
