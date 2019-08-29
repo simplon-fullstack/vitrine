@@ -4,6 +4,7 @@ $h1 = "LE TITRE DE MA PAGE D'ACCUEIL";
 
 // DANS header.php ON A AJOUTE UNE VARIABLE $h1
 require "php/header.php";
+require "php/section-flex.php";
 require "php/section-index.php";
 require "php/footer.php";
 

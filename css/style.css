@@ -4,7 +4,7 @@ html, body {
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:1.3em;
+    font-size:14px;
     background-color: #999999;
     color:#000000;
     width:100%;
@@ -27,21 +27,25 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    width:50%;
-    min-width:360px;
+    width:100%;
+    min-width:200px;
 }
 form > * {
     font-size:1rem;
     padding:0.25rem;
     margin:0.2rem;
     font-family: Arial, Helvetica, sans-serif;
+    max-width:480px;
 }
 button {
     max-width:50%;
 }
+.container {
+    display:flex;
+    flex-wrap: wrap;
+}
 .container img {
-    width:180px;
-    height:180px;
+    width:calc(100% /4);
     object-fit: cover;
 }
 .grande-image img {
@@ -80,3 +84,79 @@ button {
     top:0;
 }
 
+/* LAYOUT */
+header {
+    padding:1rem;
+    width:100%;
+}
+h1 {
+    font-size:2rem;
+}
+main {
+    width:100%;
+}
+section {
+    min-height:50vmax;
+    width:100%;
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+footer {
+    padding:1rem;
+    width:100%;
+}
+p {
+    width:100%;
+    max-width:540px;
+}
+/* RESPONSIVE ET FLEX */
+.ligne {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+/* PAR DEFAUT ON FAIT 3 COLONNES PAR LIGNE */
+.ligne > * {
+    width: 100%;
+}
+
+/* 
+
+https://getbootstrap.com/docs/4.3/layout/overview/ 
+on reprend les breakpoints de bootstrap
+
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .ligne > * {
+        width: calc(100% / 2);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .ligne > * {
+        width: calc(100% / 3);
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* COLORS */
+footer {
+    background-color: #666666;
+}
+.section1 {
+    background-color:#aaaaaa;
+}

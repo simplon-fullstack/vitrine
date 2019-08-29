@@ -1,7 +1,4 @@
         <section>
-            <h3>Accueil</h3>
-        </section>
-        <section>
             <h3>formulaire de newsletter</h3>
             <form method="GET" action="url-traitement.php">
                 <!-- formulaire newsletter -->
