@@ -1,7 +1,4 @@
         <section>
-            <h3>Galerie</h3>
-        </section>
-        <section>
             <h3>galerie</h3>
             <div class="container">
                 <img src="images/photo1.jpg" alt="photo1">
@@ -12,4 +9,7 @@
             <div class="grande-image">
                     <img src="images/photo1.jpg" alt="photo1">
             </div>
+        </section>
+        <section class="section2">
+            <h3>Description de la Galerie</h3>
         </section>
