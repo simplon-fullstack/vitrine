@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3>PRIX TTC</h3>
+        <input type="text" name="prixHT">
+        <button class="bouton">CALCULER PRIX TTC</button>
+        <div class="resultat">...</div>
+        <script>
+// ON COMMENCE A ACTIVER NOTRE CODE SEULEMENT SI LE VISITEUR CLIQUE SUR LE BOUTON
+// ETAPE1: JE RECUPERE DANS UN VARIABLE LA BALISE 
+var bouton = document.querySelector('button.bouton');
+// ETAPE2: JE RAJOUTE UN EVENT LISTENER
+bouton.addEventListener('click', function() {
+    // alert('tu as cliqué');
+    // CE CODE NE SERA ACTIVE QUE SI LE VISITEUR CLIQUE SUR LE BOUTON
+
+    // ETAPE3: JE RECUPERE LA VALEUR DU CHAMP input
+    // JE DOIS RECUPERER LA VALEUR ENTREE DANS LE CHMAP INPUT
+    var baliseInput = document.querySelector('input[name=prixHT]');
+    var prixHT = baliseInput.value;
+    console.log(prixHT);
+
+    // ETAPE4: JE CALCULE LE PRIX TTC
+    // ON PREND COMME TVA 20%
+    var prixTTC = prixHT * (1 + 20 / 100);
+    console.log(prixTTC);
+
+    // ETAPE5: AFFICHER LE RESULTAT
+    var baliseResultat = document.querySelector('.resultat');
+    baliseResultat.innerHTML = prixTTC;
+});
+
+
+        </script>
+    </section>
+</body>
+</html>
