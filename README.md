@@ -556,6 +556,7 @@ $tableauAssociatif["cle3"] = "vendredi";
     10
     5
 
+    (LES IMAGES SONT DANS LE DOSSIER billets/)
 
 ### EXO 4 : DAMIER
 
