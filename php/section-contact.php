@@ -1,7 +1,7 @@
         <section class="section2">
             <h3>formulaire de contact</h3>
             <div class="ligne">
-                <form method="GET" action="url-traitement.php">
+                <form method="GET" action="page-traitement-contact.php">
                     <!-- formulaire contact -->
                     <!-- nom, email et message du visiteur -->
                     <label for="contact-nom">nom</label>

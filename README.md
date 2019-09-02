@@ -462,38 +462,35 @@ $tableauAssociatif["cle3"] = "vendredi";
     message laissé par le visiteur2
 
 
+## STRUCTURE DE CONTROLE: BOUCLES
 
+SOUVENT ON A BESOIN DE TRAITER CHAQUE ELEMENT D'UN TABLEAU
 
+$tableauNombre = [ 23, 36, 25 ];
 
+// POUR PARCOURIR CHAQUE ELEMENT D'UN TABLEAU
+// ON VA FAIRE UNE BOUCLE
 
+// EN JS
+// for
+// .forEach
+// while
 
+// EN PHP
+// foreach
+// for
+// while
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// LE PLUS SIMPLE foreach
+// => ON PREND TOUS LES ELEMENTS DU PREMIER AU DERNIER
+foreach($tableauNombre as $index => $element)
+{
+    echo "($index,$element)";
+}
 
 
 
 ## STRUCTURE DE CONTROLE: CONDITION
-
-## STRUCTURE DE CONTROLE: BOUCLES
-
 
 
 

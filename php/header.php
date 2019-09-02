@@ -13,9 +13,29 @@
         <!-- menu de navigation -->
         <nav>
             <ul>
+<?php
+// EXERCICE
+// REMPLACER LE CODE HTML PAR DU CODE PHP
+// TABLEAU
+$tableauMenu = [ 
+    "index"     => "accueil",
+    "galerie"   => "galerie",
+    "contact"   => "contact",
+ ];
+// BOUCLE
+foreach($tableauMenu as $cle => $valeur)
+{
+    echo 
+<<<CODEHTML
+                <li><a href="$cle.php">$valeur</a></li>
+CODEHTML;
+}
+?>
+<!--
                 <li><a href="index.php">accueil</a></li>
                 <li><a href="galerie.php">galerie</a></li>
                 <li><a href="contact.php">contact</a></li>
+-->
             </ul>
         </nav>
     </header>

@@ -44,3 +44,56 @@ else
     // LA BALISE N'EXISTE PAS
     // ON NE FAIT RIEN
 }
+
+
+// ON VA AJOUTER DU CODE JS
+// QUI VA ENVOYER LES INFOS DU FORMULAIRE EN AJAX
+// AVANTAGE: ON VA RESTER SUR LA MEME PAGE
+// JE VEUX SELECTION LES BALISES form QUI ONT LA CLASSE ajax
+var listeForm = document.querySelectorAll("form.ajax");
+listeForm.forEach(function(element){
+    // JE VAIS RAJOUTER UN EVENT LISTENER SUR L'EVENEMENT submit
+    // DU FORMULAIRE
+    element.addEventListener('submit', function(event){
+        // CETTE FONCTION SERA APPELEE QUAND LE VISITEUR VA CLIQUER SUR LE BOUTON "ENVOYER"
+        // JE VAIS BLOQUER LE FONCTIONNEMENT NORMAL DU FORMULAIRE
+        event.preventDefault();
+
+        // JE VAIS AJOUTER MON ENVOI DE FORMULAIRE EN AJAX
+        // https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
+        // ON VA AJOUTER LES INFORMATIONS DU FORMULAIRE
+        // this EST UNE VARIABLE SPECIALE DE JS QUI CONTIENT LA BALISE 
+        // SUR LEQUEL L'EVENEMENT A ETE DECLENCHE
+        console.log(this);
+        // DANS LA VARIABLE formData, 
+        // ON AURA TOUTES LES INFOS REMPLIES PAR LE VISITEUR
+        var formData = new FormData(this);
+
+        // POSTE 1
+        fetch("url-traitement.php", {
+            method: "POST",
+            body: formData      // LES INFOS DU FORMULAIRE SONT ENVOYEES AUSSI
+        })
+        // IL FAUT RECUPERER LE MESSAGE DE CONFIRMATION
+        // ET L'AFFICHER
+        // POSTE 2
+        .then((response) => {
+            // JE N'AI PAS LE MESSAGE DU SERVEUR
+            console.log(response);
+            // POUR AVOIR LE MESSAGE DU SERVEUR
+            return response.text(); // PRODUIT LA VALEUR QUI SERA DANS texteServeur
+        })
+        // POSTE 3
+        .then((texteServeur) => {
+            // CA Y'EST J'AI LE MESSAGE
+            console.log(texteServeur);
+            // JE VEUX INSERER LE MESSAGE SOUS LE BOUTON DANS LE FORMULAIRE
+            var baliseConfirmation = document.querySelector("form .confirmation");
+            baliseConfirmation.innerHTML = texteServeur;
+        } );
+
+        ;
+
+    })
+});
+
